@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in - Bertam Resort</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="brand">
+        <h1>Bertam Resort</h1>
+        <p>Staff Schedule &amp; Attendance Management System</p>
+      </header>
+
+      <section class="card">
+        <h2>Log in</h2>
+
+        <form id="loginForm">
+          <div class="field">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <button type="submit" class="btn-admin" data-role="admin">
+            Log in as Admin
+          </button>
+          <button type="submit" class="btn-staff" data-role="staff">
+            Log in as Staff
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      document
+        .getElementById('loginForm')
+        .addEventListener('submit', function (e) {
+          e.preventDefault();
+          const role = e.submitter.dataset.role;
+          alert('Log masuk sebagai: ' + role);
+        });
+    </script>
+  </body>
+</html>
