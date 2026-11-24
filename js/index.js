@@ -5,8 +5,6 @@ document.getElementById('loginBtn').addEventListener('click', () => {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Jika gambar ada, sembunyikan label placeholder.
-// Jika gambar tiada/gagal dimuat, kekalkan kotak placeholder.
 document.querySelectorAll('.media img').forEach((img) => {
   const box = img.parentElement;
   const showImage = () => box.classList.add('has-image');
